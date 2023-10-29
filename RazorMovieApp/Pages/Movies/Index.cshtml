@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model RazorMovieApp.Pages.Movies.IndexModel
 
 @{
@@ -44,9 +44,9 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Movies/Edit" >Edit</a> |
+                <a asp-page="./Movies/Details/1" >Details</a> |
+                <a asp-page="./Movies/Delete/1" >Delete</a>
             </td>
         </tr>
 }
