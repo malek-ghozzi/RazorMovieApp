@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorMovieApp.Data;
 
@@ -11,9 +12,11 @@ using RazorMovieApp.Data;
 namespace RazorMovieApp.Migrations
 {
     [DbContext(typeof(RazorMovieAppContext))]
-    partial class RazorMovieAppContextModelSnapshot : ModelSnapshot
+    [Migration("20231112201134_New-DataAnnotation")]
+    partial class NewDataAnnotation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
